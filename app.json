@@ -1,0 +1,86 @@
+{
+  "expo": {
+    "name": "Face Recognition App",
+    "description": "A complete React Native facial recognition application using ArcFace ONNX model. Features include face registration, real-time verification, and secure local storage of biometric data.",
+    "slug": "react-native-facial-recognition",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/images/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "scheme": "face-recognition",
+    "githubUrl": "https://github.com/maateusx/react-native-facial-recognition",
+    "primaryColor": "#318ede",
+    "privacy": "public",
+    "platforms": ["ios", "android", "web"],
+    "splash": {
+      "image": "./src/assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#318ede"
+    },
+    "assetBundlePatterns": ["assets/**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "requireFullScreen": true,
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera for facial recognition and registration. Your biometric data stays securely on your device.",
+        "NSFaceIDUsageDescription": "Enable Face ID for enhanced security when accessing the app.",
+        "UIRequiredDeviceCapabilities": ["front-facing-camera"],
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "bundleIdentifier": "com.maateusx.facerecognition"
+    },
+    "android": {
+      "compileSdkVersion": 34,
+      "targetSdkVersion": 34,
+      "minSdkVersion": 24,
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/splash-icon.png",
+        "backgroundColor": "#318ede"
+      },
+      "allowBackup": false,
+      "permissions": ["android.permission.CAMERA", "android.permission.RECORD_AUDIO"],
+      "package": "com.maateusx.facerecognition"
+    },
+    "web": {
+      "favicon": "./src/assets/images/favicon.png",
+      "name": "Face Recognition App",
+      "shortName": "FaceRecognition",
+      "lang": "en",
+      "scope": "/",
+      "themeColor": "#318ede",
+      "description": "React Native facial recognition app with ArcFace ONNX model",
+      "dir": "auto",
+      "display": "standalone",
+      "orientation": "portrait",
+      "startUrl": "/"
+    },
+    "plugins": [
+      [
+        "react-native-vision-camera",
+        {
+          "cameraPermissionText": "$(PRODUCT_NAME) needs access to your camera for facial recognition features.",
+          "enableMicrophonePermission": false
+        }
+      ],
+      [
+        "onnxruntime-react-native",
+        {
+          "bundleCustomONNXModel": true
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false
+    },
+    "extra": {
+      "eas": {
+        "projectId": "your-eas-project-id"
+      }
+    },
+    "owner": "maateusx"
+  }
+}

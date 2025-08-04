@@ -1,0 +1,20 @@
+{
+  "colors": [
+    {
+      "color": {
+        "components": {
+          "alpha": "1.000",
+          "blue": "0.870588235294118",
+          "green": "0.556862745098039",
+          "red": "0.192156862745098"
+        },
+        "color-space": "srgb"
+      },
+      "idiom": "universal"
+    }
+  ],
+  "info": {
+    "version": 1,
+    "author": "expo"
+  }
+}
